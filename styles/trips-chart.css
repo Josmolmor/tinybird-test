@@ -1,0 +1,62 @@
+#widget {
+    display: flex;
+    height: 400px;
+    overflow-x: auto;
+    padding-bottom: 30px; /* Space for labels */
+    justify-content: center;
+    align-items: center;
+}
+
+.bar-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    height: 100%;
+}
+
+.bar-wrapper {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.bar {
+    width: 20px;
+    margin: 0 2px;
+}
+
+.bar-label {
+    margin-top: 5px;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Bar colors */
+.bar div:nth-child(1) { background-color: #3498db; } /* Passenger count */
+.bar div:nth-child(2) { background-color: #e74c3c; } /* Payment type */
+.bar div:nth-child(3) { background-color: #2ecc71; } /* Tip amount */
+.bar div:nth-child(4) { background-color: #9b59b6; } /* Total amount */
+.bar div:nth-child(5) { background-color: #f39c12; } /* Trip distance */
+
+/* Legend */
+.legend {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.legend-color {
+    display: inline-block;
+    width: 1.25rem;
+    height: 1.25rem;
+}
