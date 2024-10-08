@@ -54,6 +54,8 @@ Spent ~5 hours on this (spent way much time fighting the chart bars for no reaso
 1. Clone the repository:
    ```
    git clone https://github.com/Josmolmor/tinybird-test.git
+   ```
+   ```
    cd tinybird-test
    ```
 
