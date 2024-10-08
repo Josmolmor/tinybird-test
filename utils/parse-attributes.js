@@ -12,5 +12,7 @@ export default function parseAttributes(attrString) {
             return "Total amount";
         case 'trip_distance':
             return "Trip distance";
+        default:
+            return attrString.replaceAll('_',' ');
     }
 }

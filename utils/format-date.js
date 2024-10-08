@@ -1,5 +1,5 @@
 export default function formatDate(dateString) {
-    const date = new Date(dateString.replace(" ", "T"));
+    const date = new Date(dateString.trim().replace(" ", "T"));
 
     const options = {
         year: 'numeric',
@@ -11,5 +11,8 @@ export default function formatDate(dateString) {
         hour12: false       // Use 24-hour format
     };
 
-    return date.toLocaleString('en-US', options);
+    let formattedDate = date.toLocaleString('en-US', options);
+    // Manually fix '24:00:00' case by replacing it with '00:00:00'
+    formattedDate = formattedDate.replace('24:00:00', '00:00:00');
+    return formattedDate;
 }

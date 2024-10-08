@@ -1,4 +1,4 @@
-import {fetchData} from "../utils/api.js";
+import {fetchData} from "../lib/api.js";
 import {createBarChart, createPieChart} from "./chart.js";
 
 function renderWidget(widgetData) {

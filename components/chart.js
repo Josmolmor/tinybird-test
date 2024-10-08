@@ -130,7 +130,7 @@ export function createBarChart(data) {
     });
 }
 
-function getColorForProperty(property) {
+export function getColorForProperty(property) {
     const colors = {
         'passenger_count': 'var(--blue)',
         'trip_distance': 'var(--green)',

@@ -69,6 +69,13 @@ Spent ~5 hours on this (spent way much time fighting the chart bars for no reaso
 
 4. Open your browser and navigate to `http://localhost:5173` (or the port specified by your development server).
 
+## 🧪 Testing
+
+1. Run the following command to run tests and enable watch mode.
+   ```
+   pnpm test
+   ```
+
 ## 🚀 Usage
 
 The chart will automatically populate with trip data when the page loads. You can scroll horizontally to view more trips if they exceed the width of the viewport.
