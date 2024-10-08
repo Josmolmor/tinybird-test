@@ -81,6 +81,12 @@ Spent ~5 hours on this (spent way much time fighting the chart bars for no reaso
 The chart will automatically populate with trip data when the page loads. You can scroll horizontally to view more trips if they exceed the width of the viewport.
 Feel free to play around using the filters, refreshing the page with filters set and / or reseting them using the `reset` button.
 
+Some site images:
+![tinybird trip charts](/public/Screenshot%202024-10-08%20041818.png)
+
+![tinybird trip charts](/public/Screenshot%202024-10-08%20041827.png)
+
+
 ## 🔮 Possible Follow-ups and Improvements
 
 1. **Dependencies**: Add typescript functionality.
