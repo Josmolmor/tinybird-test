@@ -3,9 +3,10 @@
 https://gist.github.com/xavijam/bf2226f8d2bb16b497f59f48ee18896d
 
 This project visualizes trip data using a custom bar chart implementation. The chart displays information about passenger count, trip distance, total amount, and tip amount for various trips.
-It also includes a secondary pie chart to display payment data information as a bonus.
+It also includes a secondary pie chart to display payment data information as a bonus. I don't know what's the relation between the payment type ID used and the actual values, so I've just assumed `1` is for "Cash", `2` is for "Card", `3` is "Transference" and `4` is "Other" [check this](https://github.com/Josmolmor/tinybird-test/blob/4a4ac58dd433437a3d2b70b7f5c4f64e15a109ad/components/chart.js#L5).
+It fallbacks to "Unknown" [here](https://github.com/Josmolmor/tinybird-test/blob/4a4ac58dd433437a3d2b70b7f5c4f64e15a109ad/components/chart.js#L48)  
 
-For filtering, I've included both `before` and `after` filtering based on the trip date, a predefined set number of trips (10, 20, 30, 40 and 50).
+For filtering, I've included both `before` and `after` filtering based on the trip date and a predefined set of number `[10, 20, 30, 40, 50]` for overall number of trips returned from the API (limit).
 As for sorting, you can sort by all the params being retrieved; both ascending and descending (default).
 There's also a handy `reset` button that should make it easier to get rid of all the actives filters.
 
