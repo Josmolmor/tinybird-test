@@ -35,4 +35,4 @@ document.querySelector('#app').innerHTML = `
 
 const urlParams = getSearchParams();
 setupFilters(Object.fromEntries(urlParams.entries()));
-await fetchDataAndRenderWidget(Object.fromEntries(urlParams.entries()))
+fetchDataAndRenderWidget(Object.fromEntries(urlParams.entries()))
