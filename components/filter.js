@@ -1,5 +1,6 @@
 import {fetchDataAndRenderWidget} from "./widget.js";
 import parseAttributes from "../utils/parse-attributes.js";
+import getSearchParams from "../utils/get-search-params.js";
 
 export const FILTER_ELEMENT_IDS = ['trip_date_before', 'trip_date_after', 'limit', 'order_by', 'sort_order'];
 export const VALID_FILTER_KEYS = ['select', 'passenger_count','total_amount','trip_distance', 'tip_amount', 'tpep_pickup_datetime'];
@@ -18,8 +19,7 @@ function commonUrlChangeEvent(elementId) {
         const newFilter = event.target.value;
 
         // Get current URLSearchParams from the URL
-        const urlParams = new URLSearchParams(window.location.search);
-        console.log('=>', elementId, newFilter, newFilter === 'null');
+        const urlParams = getSearchParams();
 
         // If newFilter has a value, update or add the query param
         if (newFilter !== 'null' && newFilter !== '') {
@@ -115,7 +115,7 @@ export function setupFilters(filters) {
     })
     const resetButton = document.createElement('button');
     resetButton.textContent = 'Reset filters';
-    resetButton.addEventListener('click', async () => {
+    resetButton.addEventListener('click', async (e) => {
         const url = cleanUrlSearchParams();
         // Update the URL in the browser without reloading the page
         window.history.pushState({}, '', url);

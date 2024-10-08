@@ -4,6 +4,7 @@ import './styles/pie-chart.css';
 
 import {fetchDataAndRenderWidget} from "./components/widget.js";
 import {setupFilters} from "./components/filter.js";
+import getSearchParams from "./utils/get-search-params.js";
 
 document.querySelector('#app').innerHTML = `
     <div class="card">
@@ -32,6 +33,6 @@ document.querySelector('#app').innerHTML = `
     <footer>Made by <a href="https://molina.digital/" target="_blank">molina</a> for <a href="https://www.tinybird.co/" target="_blank">tinybird 🐦</a></footer>
 `;
 
-const urlParams = new URLSearchParams(window.location.search);
+const urlParams = getSearchParams();
 setupFilters(Object.fromEntries(urlParams.entries()));
 await fetchDataAndRenderWidget(Object.fromEntries(urlParams.entries()))
