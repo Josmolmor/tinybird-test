@@ -1,4 +1,4 @@
-# tinybird frontend engineer test
+# 🐦 tinybird frontend engineer test
 
 https://gist.github.com/xavijam/bf2226f8d2bb16b497f59f48ee18896d
 
@@ -15,37 +15,45 @@ Had to check the tinybird docs multiple times to come up with proper search para
 
 Spent ~5 hours on this (spent way much time fighting the chart bars for no reason)
 
-## Key Decisions and Implementation Details
+## 🗝️ Key Decisions and Implementation Details
 
 1. **Tech stack**:
    - Kept it as lightweight as possible. Vanilla JS with Vite and Vitest for testing.
+
 2. **Data fetching**:
    - Limited the query by selecting only the fields that I wanted to use instead of selecting `*`.
+
 3. **Deep linking**:
    - Working as expected for all the params. If the value used doesn't match any real DB column, the app will prompt the user with an error.
+
 4. **Bar Chart Structure**:
     - We use a nested structure with `.bar-group` and `.bar-wrapper` to allow for bottom alignment of bars with different heights.
     - Each bar group represents a single trip, containing multiple bars for different data points.
+
 5. **Responsive Design**:
     - The chart is horizontally scrollable to accommodate a large number of trips.
     - A fixed height is set for the chart container to ensure consistent visualization.
     - Bar heights are calculated relative to the maximum value across all properties and trips, ensuring proper visual representation.
+
 6. **Color Coding**:
     - Each property (passenger count, trip distance, etc.) is assigned a unique color for easy identification.
+
 7. **Tooltips**:
-    - Each bar has a tooltip showing the exact value and property it represents.
+    - Each bar has a tooltip showing the exact value and property it represents. Hover over the bars to see it.
+
 8. **Date Labels**:
     - Each trip's date is displayed below its bar group for context.
+
 9. **Themes**
    - App should load based on the `prefers-color-scheme` to show either on light or dark mode.
    - Usage of CSS variables to ease tweaking colors around.
 
-## Installation Instructions
+## ⚙️ Installation Instructions
 
 1. Clone the repository:
    ```
-   git clone [repository-url]
-   cd [repository-name]
+   git clone https://github.com/Josmolmor/tinybird-test.git
+   cd tinybird-test
    ```
 
 2. Install dependencies:
@@ -60,11 +68,12 @@ Spent ~5 hours on this (spent way much time fighting the chart bars for no reaso
 
 4. Open your browser and navigate to `http://localhost:5173` (or the port specified by your development server).
 
-## Usage
+## 🚀 Usage
 
 The chart will automatically populate with trip data when the page loads. You can scroll horizontally to view more trips if they exceed the width of the viewport.
+Feel free to play around using the filters, refreshing the page with filters set and / or reseting them using the `reset` button.
 
-## Possible Follow-ups and Improvements
+## 🔮 Possible Follow-ups and Improvements
 
 1. **Dependencies**: Add typescript functionality.
 

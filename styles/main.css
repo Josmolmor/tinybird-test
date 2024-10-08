@@ -35,10 +35,15 @@ body {
     min-height: 100vh;
 }
 
+main {}
+
+h1, h2, h3, h4 {
+    margin: 0 0 1rem;
+}
+
 h1 {
     font-size: 2.1em;
     line-height: 1.1;
-    margin-top: 0;
 }
 
 label {
@@ -65,10 +70,10 @@ input {
 }
 
 #filter-container {
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
+    display: grid;
+    gap: 1rem;
     align-items: flex-end;
+    grid-template-columns: 1fr 1fr 1fr;
 
     > button {
         margin-left: auto;
@@ -79,6 +84,8 @@ input {
     background: rgba(0,0,0,0.05);
     border-radius: 1rem;
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
 
     &:not(:last-of-type) {
         margin-bottom: 2rem;
@@ -115,4 +122,10 @@ button:focus-visible {
     button {
         background-color: #f9f9f9;
     }
+}
+
+footer {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
 }
