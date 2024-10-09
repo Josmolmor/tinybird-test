@@ -3,7 +3,7 @@ import parseAttributes from "../utils/parse-attributes.js";
 import getSearchParams from "../utils/get-search-params.js";
 
 export const FILTER_ELEMENT_IDS = ['trip_date_before', 'trip_date_after', 'limit', 'order_by', 'sort_order'];
-export const VALID_FILTER_KEYS = ['select', 'passenger_count','total_amount','trip_distance', 'tip_amount', 'tpep_pickup_datetime'];
+export const VALID_FILTER_KEYS = ['Select a field', 'passenger_count','total_amount','trip_distance', 'tip_amount', 'tpep_pickup_datetime'];
 
 function cleanUrlSearchParams() {
     // Get the current URL
@@ -75,12 +75,12 @@ export function setupFilters(filters) {
                 break;
             case 'order_by':
                 const sort_label = document.createElement("label");
-                sort_label.textContent = "Order by";
+                sort_label.textContent = "Sort by";
                 const sort_select = document.createElement("select");
                 sort_select.id = elId;
                 VALID_FILTER_KEYS.map((n) => {
                     const option = document.createElement("option");
-                    option.value = n === 'select' ? null : n.toString();
+                    option.value = n.toLowerCase() === 'select a field' ? null : n.toString();
                     option.textContent = parseAttributes(n) ?? 'Select an option';
                     if (n === filters.order_by) {
                         option.selected = true;
@@ -92,7 +92,7 @@ export function setupFilters(filters) {
                 break;
             case 'sort_order':
                 const sort_order_label = document.createElement("label");
-                sort_order_label.textContent = "Order by";
+                sort_order_label.textContent = "Sort direction";
                 const sort_order_select = document.createElement("select");
                 sort_order_select.id = elId;
                 ['desc', 'asc'].map((n) => {
