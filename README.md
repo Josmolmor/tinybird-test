@@ -84,9 +84,9 @@ The chart will automatically populate with trip data when the page loads. You ca
 Feel free to play around using the filters, refreshing the page with filters set and / or reseting them using the `reset` button.
 
 Some site images:
-![tinybird trip charts](/public/Screenshot%202024-10-08%20041818.png)
+![tinybird trip charts](/public/Screenshot 2024-10-09 202228.png)
 
-![tinybird trip charts](/public/Screenshot%202024-10-08%20041827.png)
+![tinybird trip charts_2](/public/Screenshot 2024-10-09 202235.png)
 
 
 ## 🔮 Possible Follow-ups and Improvements
